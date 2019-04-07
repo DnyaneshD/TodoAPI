@@ -12,7 +12,7 @@ namespace TodoAPI.Services
 
         public TodoService(TodoContext context) => _context = context;
 
-        public async Task<IReadOnlyCollection<TodoModel>> Find()
+        public async Task<IEnumerable<TodoModel>> Find()
         {
             return await _context.Todos.AsNoTracking().ToListAsync();
         }

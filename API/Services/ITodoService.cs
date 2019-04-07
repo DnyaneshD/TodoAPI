@@ -6,7 +6,7 @@ namespace TodoAPI.Services
 {
     public interface ITodoService
     {
-        Task<IReadOnlyCollection<TodoModel>> Find();
+        Task<IEnumerable<TodoModel>> Find();
 
         Task<TodoModel> FindOne(int id);
 
