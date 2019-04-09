@@ -15,7 +15,7 @@ namespace UnitTetsts
         {
             //Arrange 
             var options = new DbContextOptionsBuilder<TodoContext>()
-               .UseInMemoryDatabase(databaseName: "TODOs")
+               .UseInMemoryDatabase(databaseName: "TODOsFind")
                .Options;
 
             var todoModel = new TodoModel
@@ -28,11 +28,6 @@ namespace UnitTetsts
             {
                 var todoService = new TodoService(context);
                 todoService.CreateTodo(todoModel).Wait();
-            }
-
-            using (var context = new TodoContext(options))
-            {
-                var todoService = new TodoService(context);
 
                 //Act
                 var result = todoService.Find().Result;
@@ -60,7 +55,7 @@ namespace UnitTetsts
             var context = new TodoContext(options);
             var todoService = new TodoService(context);
             var createdTodo = todoService.CreateTodo(todoModel).Result;
-            
+
             //Act
             var result = todoService.FindOne(createdTodo.Id).Result;
 
