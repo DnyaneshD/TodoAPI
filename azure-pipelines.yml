@@ -13,10 +13,12 @@ steps:
   - task: DotNetCoreCLI@2
     displayName: Build
     inputs:
-      command: build
+      command: dotnet build
       projects: "**/*.csproj"
-  - task: DotNetCoreCLI@2
+  - task: IntegrationTests
+    inputs:
+      command: dotnet test ~/IntegrationTests/IntegrationTests/IntegrationTests.csproj
+  - task: UnitTests
     inputs:
       command: test
-      projects: "**/*Tests/*.csproj"
-      arguments: "--configuration $(buildConfiguration)"
+      projects: "**/UnitTests/*.csproj"
