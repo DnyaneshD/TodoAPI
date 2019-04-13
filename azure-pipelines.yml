@@ -16,5 +16,5 @@ steps:
       command: dotnet build
       projects: "**/*.csproj"
 
-script: dotnet test ~/IntegrationTests/IntegrationTests/IntegrationTests.csproj
-script: dotnet test ~/UnitTests/UnitTests.csproj
+- script: dotnet test ~/IntegrationTests/IntegrationTests/IntegrationTests.csproj
+- script: dotnet test ~/UnitTests/UnitTests.csproj
