@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoAPI", "API\TodoAPI.csproj", "{54FFEF05-6B1F-4E31-B36F-815F17079E9B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTetsts", "UnitTetsts\UnitTetsts.csproj", "{4DE8F027-870D-468E-9820-8B6C98DB4654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTetsts", "UnitTests\UnitTests.csproj", "{4DE8F027-870D-468E-9820-8B6C98DB4654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationsTests", "IntegrationTests\IntegrationsTests\IntegrationsTests.csproj", "{4C9C8AA2-DDAF-44A0-A71F-3DC8BAB49F04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{4C9C8AA2-DDAF-44A0-A71F-3DC8BAB49F04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,10 +10,7 @@ namespace TodoAPI.Controllers
     {
         private ITodoService _todoService;
 
-        public TodosController(ITodoService todoService)
-        {
-            _todoService = todoService;
-        }
+        public TodosController(ITodoService todoService) => _todoService = todoService;
 
         // GET api/values
         [HttpGet]
