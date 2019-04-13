@@ -13,7 +13,7 @@ steps:
   - task: DotNetCoreCLI@2
     displayName: Build
     inputs:
-      command: dotnet build
+      command: build
       projects: "**/*.csproj"
   - script: dotnet test ~/IntegrationTests/IntegrationTests/IntegrationTests.csproj
   - script: dotnet test ~/UnitTests/UnitTests.csproj
