@@ -15,10 +15,10 @@ steps:
     inputs:
       command: dotnet build
       projects: "**/*.csproj"
-  - task: IntegrationTests
+  - task: DotNetCoreCLI@2
     inputs:
       command: dotnet test ~/IntegrationTests/IntegrationTests/IntegrationTests.csproj
-  - task: UnitTests
+  - task: DotNetCoreCLI@2
     inputs:
       command: test
       projects: "**/UnitTests/*.csproj"
